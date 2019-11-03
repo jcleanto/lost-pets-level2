@@ -30,9 +30,9 @@ export default class Login extends Component {
                         {userDonations.map((donation) => (
                             <div key={donation.id} className="card">
                                 <div className="card-container">
-                                    <p>Dia: <span>{donation.date}</span></p>
+                                    <p>Day (Time): <span>{donation.date.substring(0,10)} ({donation.date.substring(11,16)})</span></p>
                                     <p>Pet: <span>{ cards.cards.filter((card) => { return card.id === donation.idAnimal; })[0].petName }</span></p>
-                                    <p>Valor: <span>${donation.amount}</span></p>
+                                    <p>Amount: <span>${donation.amount}</span></p>
                                 </div>
                             </div>
                         ))

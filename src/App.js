@@ -7,6 +7,7 @@ import Modal from './components/Modal';
 import { cards, users, donations } from './utils/mocks';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faPaw } from '@fortawesome/free-solid-svg-icons';
 
 export default class App extends Component {
 
@@ -329,7 +330,7 @@ export default class App extends Component {
 
           <header className="App-header">
             <div className="logo">
-              <span ref={this.homeLink}>Lost Pets</span>
+              <span ref={this.homeLink}><FontAwesomeIcon icon={faPaw} /> Lost Pets</span>
             </div>
             { isLogged && user && 
               <div className="welcome">{`Welcome, ${user.login}`}</div>
