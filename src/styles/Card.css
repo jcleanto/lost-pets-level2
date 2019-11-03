@@ -1,0 +1,151 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 2px solid #bbbbbb;
+}
+
+.photo {
+    
+    background-size: cover;
+    display: flex;
+    align-items: stretch;
+    height: 215px;
+}
+
+.photo .photoHeader {
+    background: rgba(3, 0, 0, 0.7);
+    width: 300px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.photo .photoHeader > div {
+    font-weight: bold;
+    font-size: 1em;
+    color: white;
+    margin-left: 6px;
+    flex-grow: 6;
+}
+
+.photo .photoHeader > button {
+    flex-grow: 4;
+    margin-right: 6px;
+    background-color: cornflowerblue;
+    border: 1px solid white;
+    color: white;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    padding: 20px 0px 20px 0px;
+}
+
+.info > div.infoKey {
+    width: 100px;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-left: 6px;
+}
+
+.info > div.infoValue {
+    width: 186px;
+    font-size: 1.1em;
+    text-align: right;
+    margin-right: 6px;
+}
+
+.donate {
+    background: rgb(207, 204, 204);
+    width: 300px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.donate > div {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: black;
+    margin-left: 12px;
+    flex-grow: 6;
+}
+
+.donate > div > span {
+    font-weight: normal;
+    font-size: 1.1em;
+}
+
+.donate > button {
+    flex-grow: 4;
+    margin-right: 12px;
+    background-color: cornflowerblue;
+    border: none;
+    color: white;
+    font-size: 1em;
+    padding: 8px 0px 8px 0px;
+}
+
+.donate > button:disabled {
+    flex-grow: 4;
+    margin-right: 12px;
+    background-color: rgb(160, 185, 233);
+    border: none;
+    color: white;
+    font-size: 1em;
+    padding: 8px 0px 8px 0px;
+}
+
+.call {
+    display: flex;
+    align-content: stretch;
+}
+
+.call > div {
+    background-color: rgb(112, 151, 33);
+    width: 100%;
+    height: 100%;
+    border: none;
+    color:white;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 5px;
+}
+
+.donate > button.redButton {
+    background-color: sienna;
+}
+
+.card-shake {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    animation-fill-mode: initial;
+    -webkit-animation-fill-mode: initial;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+        -webkit-transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+        -webkit-transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+        -webkit-transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+        -webkit-transform: translate3d(4px, 0, 0);
+    }
+}
